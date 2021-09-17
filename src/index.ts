@@ -8,6 +8,7 @@ import './index.sass';
 function install(editor: NodeEditor) {
     editor.bind('connectionpath');
     editor.bind('connectiondrop');
+    editor.bind('_connectiondrop');
     editor.bind('connectionpick');
     editor.bind('resetconnection');
     
@@ -32,7 +33,8 @@ function install(editor: NodeEditor) {
         const flowEl = document.elementFromPoint(e.clientX, e.clientY);
 
         if(picker.io) {
-            editor.trigger('connectiondrop', picker.io)
+            editor.trigger('connectiondrop', picker.io);
+            editor.trigger('_connectiondrop', picker.io.connections.slice());
         }
         if(flowEl) {
             flow.complete(getMapItemRecursively(socketsParams, flowEl) || {})
