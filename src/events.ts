@@ -8,7 +8,7 @@ declare module 'rete/types/events' {
             d: string
         },
         connectiondrop: Input | Output
-        _connectiondrop: Input | Output
+        _connectiondrop: any
         connectionpick: Input | Output
         resetconnection: void
     }

@@ -34,7 +34,7 @@ function install(editor: NodeEditor) {
 
         if(picker.io) {
             editor.trigger('connectiondrop', picker.io);
-            editor.trigger('_connectiondrop', picker.io.connections.slice());
+            editor.trigger('_connectiondrop', flowEl);
         }
         if(flowEl) {
             flow.complete(getMapItemRecursively(socketsParams, flowEl) || {})
