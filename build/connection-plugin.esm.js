@@ -372,7 +372,7 @@ ___$insertStyle(".connection {\n  overflow: visible !important;\n  position: abs
 function install(editor) {
   editor.bind('connectionpath');
   editor.bind('connectiondrop');
-  editor.bind('_connectiondrop');
+  editor.bind('connectiondropelement');
   editor.bind('connectionpick');
   editor.bind('resetconnection');
   var picker = new Picker(editor);

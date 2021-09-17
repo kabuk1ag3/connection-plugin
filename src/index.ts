@@ -8,7 +8,7 @@ import './index.sass';
 function install(editor: NodeEditor) {
     editor.bind('connectionpath');
     editor.bind('connectiondrop');
-    editor.bind('_connectiondrop');
+    editor.bind('connectiondropelement');
     editor.bind('connectionpick');
     editor.bind('resetconnection');
     
